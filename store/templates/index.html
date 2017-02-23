@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="page-header">
+<h1>فروشگاه آنلاین</h1>
+</div>
+<img src="https://www.chatstack.com/blog/wp-content/uploads/2015/11/TopToolsOnlineStoreHeader.png">
+
+<h2>
+<div class="btn-group btn-group-justified">
+ <a href="{% url 'mobiles' %}" class="btn btn-success btn-lg">محصولات</a>
+ <a href="{% url 'brands' %}" class="btn btn-danger btn-lg">برندها</a>
+</div>
+</h2>
+
+{% endblock %}

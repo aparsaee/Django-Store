@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<h1>اطلاعات تکمیلی شما:</h1>
+<img src="{% static "" %}images/{{mob.pk}}.jpg" alt="No image" title="{{mobiles.name}}" style="width:515px;height:500px;float:left"/>
+<p><strong>برند:</strong>{{ mob.brand }}</p>
+<p><strong>نام:</strong> {{ mob.name }}</p>
+<p><strong>توضیحات:</strong> {{ mob.review }}</p>
+<p><strong>سیستم عامل:</strong> {{ mob.operating_system }}</p>
+<p><strong>تکنولوژی صفحه نمایش:</strong> {{ mob.screen_technology }}</p>
+<p><strong>اندازه صفحه نمایش:</strong> {{ mob.screen_size }}</p>
+<p><strong>قیمت:</strong> {{ mob.price }} <td>تومان</td></p>
+<p><strong>نام کاربری خریدار:</strong>{{ user }}</p>
+<p><strong>نام و نام خانوادگی خریدار:</strong>{{ fname }} {{ lname }} </p>
+<p><strong>ایمیل خریدار:</strong>{{ email }}</p>
+  <form method="POST" class="post-form">{% csrf_token %}
+      {{ form.as_ul }}
+      <button type="submit" class="save btn btn-danger btn-lg">ثبت سفارش</button>
+  </form>
+{% endblock %}

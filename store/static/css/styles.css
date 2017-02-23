@@ -1,0 +1,37 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+
+.col-sm-2 {
+    background-color: #ffe502;
+}
+
+h1 a, li a, h1, li, h2 {
+    color: #089105;
+}
+
+.page-header {
+    background-color: #20bc0f;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.button2 {
+    background-image: url('https://cdn.zarinpal.com/badges/easypay/logo1.png');
+    border: none;
+    color: white;
+    padding: 20px 79px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}

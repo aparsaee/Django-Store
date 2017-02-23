@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+  <h1>نام محصول: {{ mobiles.brand }} {{ mobiles.name }}</h1>
+  <img src="{% static "" %}images/{{mobiles.pk}}.jpg" alt="No image" title="{{mobiles.name}}" style="width:515px;height:500px;float:left"/>
+
+  <p><strong>برند:</strong> <a href="{{mobiles.brand.get_absolute_url}}">{{ mobiles.brand }}</a></p>
+  <p><strong>نام:</strong> {{ mobiles.name }}</p>
+  <p><strong>توضیحات:</strong> {{ mobiles.review }}</p>
+  <p><strong>سیستم عامل:</strong> {{ mobiles.operating_system }}</p>
+  <p><strong>تکنولوژی صفحه نمایش:</strong> {{ mobiles.screen_technology }}</p>
+  <p><strong>اندازه صفحه نمایش:</strong> {{ mobiles.screen_size }}</p>
+  <p><strong>قیمت:</strong> {{ mobiles.price }} <td>تومان</td></p>
+  <div style="margin-left:20px;margin-top:20px">
+    <h4></h4>
+
+    <hr>
+    {% if mobiles.repository > 0 %}
+    <p class="text-success">{{ mobiles.get_status_display }}</p>
+    <p><strong>موجودی:</strong> {{ mobiles.repository }}</p>
+    <a href="{% url 'info' slug=mobiles.pk %}" class="btn btn-success btn-lg">خرید</a>
+    {% else %}
+    <p class="text-danger">{{ mobiles.get_status_display }}</p>
+    <p><strong>موجودی:</strong> {{ mobiles.repository }}</p>
+    {% endif %}
+  </div>
+{% endblock %}

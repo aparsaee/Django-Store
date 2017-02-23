@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>لیست همه برندها</h1>
+
+    {% if brands %}
+    <ul>
+
+      {% for brand in brands %}
+      <li>
+        <a href="{{ brand.get_absolute_url }}">{{ brand.name }}</a> ({{ brand.country }})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>متاسفانه هنوز برندی وجود ندارد!</p>
+    {% endif %}
+{% endblock %}

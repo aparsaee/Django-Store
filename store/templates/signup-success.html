@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>!تبریک</h1>
+  <p>عضویت شما با موفقیت به اتمام رسید</p>
+  <p>برای ورود به حساب خود روی دکمه زیر کلیک کنید</p>
+  <a href="{% url 'login' %}" class="btn btn-primary">ورود</a>
+{% endblock %}

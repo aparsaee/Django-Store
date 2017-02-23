@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>کالاهای خریداری شده توسط شما</h1>
+  {% for copy in sold %}
+  <div>
+    <ul>
+    <li><strong>برند:</strong> {{ copy.brand }}</li>
+    <li><strong>نام:</strong> {{ copy.product }}</li>
+    <li><strong>تاریخ خرید:</strong> {{ copy.date }}</li>
+  </ul>
+  </div>
+  {% endfor %}
+  <a href="{% url 'index' %}" class="btn btn-primary">بازگشت به صفحه اصلی</a>
+
+{% endblock %}

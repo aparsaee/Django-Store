@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>نام: {{ brands.name }}</h1>
+
+  <p><strong>نام برند:</strong> {{ brands.name }}</p>
+  <p><strong>کشور سازنده:</strong> {{ brands.country }}</p>
+  <h1>محصولات:</h1>
+
+  {% for mob in mobs %}
+  <div>
+    <ul>
+    <li><a href="{{ mob.get_absolute_url }}">{{ mob }}</a></li>
+    </ul
+  </div>
+  {% endfor %}
+
+{% endblock %}
