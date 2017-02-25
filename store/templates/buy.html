@@ -19,8 +19,7 @@
   <p><strong>کدپستی:</strong>{{ sold.zip_code }}</p>
   <p><strong>تلفن همراه:</strong>{{ sold.phone }}</p>
   <p><strong>تاریخ خرید:</strong>{{ time }}</p>
-  <a target='_blank' title='پرداخت آنلاین' href='https://zarinp.al/76752'><img src='https://cdn.zarinpal.com/badges/easypay/logo1.png'></a>
-  <a href="{% url 'pay' slug=mob.slug %}" class="btn btn-primary">پرداخت</a>
+  <a href="{% url 'request' %}" class="btn btn-primary">پرداخت</a>
   <h1>موفق و پیروز باشید</h1>
 
 {% endblock %}

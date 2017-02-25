@@ -1,9 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Mobile, Brand, Sold
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import SoldForm, UserForm
-from django.shortcuts import redirect
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
